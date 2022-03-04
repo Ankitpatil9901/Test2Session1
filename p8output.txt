@@ -1,1 +1,26 @@
+ gcc -g p8original.c -lm
+ ./a.out
+Enter the no of sides
+5
+Enter th coordinates of line:- 8
 
+7
+Enter th coordinates of line:- 9
+8
+Enter th coordinates of line:- 8
+7
+Enter th coordinates of line:- 5
+7
+Enter th coordinates of line:- 5
+4
+Enter th coordinates of line:- 9
+7
+Enter th coordinates of line:- 6
+5
+Enter th coordinates of line:- 2
+4
+Enter th coordinates of line:- 5
+1
+Enter th coordinates of line:- 6
+4
+THE PERIMETER OF POLYGON IS 0.000000 
