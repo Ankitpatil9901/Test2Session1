@@ -1,61 +1,7 @@
- 
- gcc -g p1original.c -lm
- gdb ./a.out
-GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
-Copyright (C) 2018 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
-and "show warranty" for details.
-This GDB was configured as "x86_64-linux-gnu".
-Type "show configuration" for configuration details.
-For bug reporting instructions, please see:
-<http://www.gnu.org/software/gdb/bugs/>.
-Find the GDB manual and other documentation resources online at:
-<http://www.gnu.org/software/gdb/documentation/>.
-For help, type "help".
-Type "apropos word" to search for commands related to "word"...
-Reading symbols from ./a.out...done.
-(gdb) b main
-Breakpoint 1 at 0x8ad: file p1original.c, line 17.
-(gdb) r
-Starting program: /home/runner/Test2Session1-1/a.out 
-warning: Error disabling address space randomization: Operation not permitted
-
-Breakpoint 1, main () at p1original.c:17
-17  {
-(gdb) n
-19    input(&a,&b,&c,&d);
-(gdb) s
-input (x1=0x7ffdb5b34e14, y1=0x7ffdb5b34e18, x2=0x7ffdb5b34e1c, 
-    y2=0x7ffdb5b34e20) at p1original.c:5
-5     printf("Enter a values of x1,y1,x2,y2:");
-(gdb) n
-6     scanf("%f%f%f%f",x1,y1,x2,y2);
-(gdb) n
-Enter a values of x1,y1,x2,y2:5
+gcc -g p1original.c -lm
+ ./a.out
+Enter a values of x1,y1,x2,y2:4
 5
-5
-5
-7   }
-(gdb) n
-main () at p1original.c:20
-20    find_distance(a,b,c,d,&e);
-(gdb) n
-21    output(a,b,c,d,e);
-(gdb) s
-output (x1=5, y1=5, x2=5, y2=5, area=0) at p1original.c:14
-14    printf("Distance between %f,%f and %f,%f is %f",x1,y1,x2,y2,area);
-(gdb) n
-15  }
-(gdb) n
-main () at p1original.c:22
-22    return 0;
-(gdb) n
-23  }
-(gdb) q
-A debugging session is active.
-
-    Inferior 1 [process 248] will be killed.
-
-Quit anyway? (y or n) y
+6
+7
+Distance between 4.000000,5.000000 and 6.000000,7.000000 is 6.000000 
