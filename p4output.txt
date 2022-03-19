@@ -1,5 +1,7 @@
-gcc -g p4original.c
+ gcc -g p4original.c
  ./a.out
-Enter the value of x
-6
-6 th fibonacci number is 7 
+Enter the value of x2
+2 th fibonacci number is 1 
+
+
+

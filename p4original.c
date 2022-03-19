@@ -15,7 +15,7 @@ int find_fibo(int n)
       a=b;
       b=c;
     }
-  return (c-1);
+  return c;
 }
 void output(int n,int fibo)
 {
