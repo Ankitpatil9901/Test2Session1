@@ -1,24 +1,50 @@
-int string_length(char *s)
-{
-  int i;
-  for(i=0;s[i]!='\0';i++);
-  return i;
-}
-
-int string_ncmp(char *s1,char *s2)
-{
-  for(int i=0; i<n && s1[i]==s2[i] && s1[i] != '\0';i++);
-  return s1[i] - s2[i];
-}
-
-int string_index(char *s, char *subs)
-{
-  int l1=string_lenght(s);
-  int l2=string_lenght(subs);
-  if l1 < l2
-      return -1;
-  for(int i=0;i<l1-l2;i++)
-    if (string_nscmp(s,subs))
-      return i;
-  return -1;
-}
+#include<stdio.h> 
+ int input_size() 
+ { 
+   int n; 
+   printf("enter the size of a array\n"); 
+   scanf("%d",&n); 
+   return n; 
+ } 
+ void input_array(int n,int a[n]) 
+ { 
+   printf("enter the array elements\n"); 
+   for(int i=0;i<n;i++) 
+     { 
+       scanf("%d",&a[i]); 
+     } 
+ } 
+ int find_largest(int n,int a[n]) 
+ { 
+   int largest,temp=0; 
+   int i; 
+   for(i=0;i<n;i++) 
+     { 
+       if(a[i]>temp) 
+       { 
+         temp=a[i]; 
+         largest=i; 
+       } 
+       else 
+       { 
+         temp=temp; 
+       } 
+     } 
+   return largest; 
+    
+ } 
+ void output(int n,int a[n],int largest) 
+ { 
+   printf("the largest number is %d in position %d",a[largest],largest); 
+ } 
+ int main() 
+ { 
+   int x; 
+   x=input_size(); 
+   int a[x]; 
+   input_array(x,a); 
+   int result; 
+   result=find_largest(x,a); 
+   output(x,a,result); 
+   return 0;
+ }
