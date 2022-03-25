@@ -66,4 +66,5 @@ int main()
   input_polygon(&p);
   find_perimeter(&p);
   output(p);
+  return 0;
 }
